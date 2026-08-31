@@ -67,12 +67,11 @@ else:
     print("Status Code:", resp.status_code) 
     exit(1)  # 退出程序或处理错误
 
-print("fuck")
 city_id = resp_json["location"][0]["id"]
 params["location"] = city_id
 
 # 根据城市地理位置获取当前实时天气
-url = "https://n93jpfeh9u.re.qweatherapi.com/v7/weather/now"
+url = "https://m96mthd8c3.re.qweatherapi.com/v7/weather/now"
 realtime_json = json.loads(requests.get(url, params, headers=headers).text)
 # 实时天气状况
 realtime = realtime_json["now"]
@@ -80,7 +79,7 @@ realtime = realtime_json["now"]
 now_temperature = realtime["temp"] + "℃" + realtime["text"]
 
 # 根据城市地理位置获取3天天气状况
-url = "https://n93jpfeh9u.re.qweatherapi.com/v7/weather/3d"
+url = "https://m96mthd8c3.re.qweatherapi.com/v7/weather/3d"
 day_forecast_json = json.loads(requests.get(url, params, headers=headers).text)
 
 # -----------------------今天天气状况-----------------------------
