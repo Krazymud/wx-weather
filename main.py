@@ -36,7 +36,7 @@ template_id_day = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 晚上模板id
 template_id_night = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 呢称
-name = '\U1F34E'+'宝宝'
+name = '\U0001F34E'+'宝宝'
 # 城市
 city = '汕尾市'
 
