@@ -251,5 +251,6 @@ if __name__ == '__main__':
     # 拆分user_ids
     user_ids = user_ids.split(";")
     for e in user_ids:
+        print(e)
         res = wm.send_template(e, template_id_day, data)
         print(res)
