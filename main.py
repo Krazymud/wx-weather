@@ -30,7 +30,7 @@ birthday = '1998-06-06'
 app_id = "wx8ca13ecd97e07749"
 app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
 # 微信公众号的user_id,多个用;（分号）隔开
-user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ"
+user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ;ollgl3I3GftjoVZ2edWNb54fLil4"
 # 白天模板id
 template_id_day = "lVE0caMOKtpX1ewQhhCE1XwPKyTGbtimeg4ylGaCXAc"
 # 晚上模板id
@@ -39,7 +39,8 @@ template_id_night = "lVE0caMOKtpX1ewQhhCE1XwPKyTGbtimeg4ylGaCXAc"
 name = '宝宝'
 # 城市
 city = '汕尾市'
-
+#deepseek prompt“
+prompt = '生成一句不落俗套的描写关于爱情、情侣的文案，精炼有趣，文字中不要直接出现“爱情、情侣”。返回的答案只提供句子，不要说其他任何内容'
 
 # 当前时间
 today = datetime.now()
@@ -186,11 +187,50 @@ def get_birthday():
 
 # 彩虹屁接口
 def get_words():
-    words = requests.get("https://api.shadiao.pro/chp")
-    if words.status_code != 200:
-        return get_words()
-    text = words.json()['data']['text']
-    return text
+    url = "https://api.deepseek.com/chat/completions"
+
+    payload = json.dumps({
+        "messages": [
+        {
+            "content": "You are a helpful assistant",
+            "role": "system"
+        },
+        {
+            "content": prompt,
+            "role": "user"
+        }
+        ],
+        "model": "deepseek-v4-pro",
+        "thinking": {
+            "type": "enabled"
+        },
+        "reasoning_effort": "high",
+        "max_tokens": 4096,
+        "response_format": {
+        "type": "text"
+        },
+        "stop": None,
+        "stream": False,
+        "stream_options": None,
+        "temperature": 1,
+        "top_p": 1,
+        "tools": None,
+        "tool_choice": "none",
+        "logprobs": False,
+        "top_logprobs": None
+        })
+    headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer <TOKEN>'
+    }
+    response = requests.request("POST", url, headers=headers, data=payload)
+    return response.text
+    #words = requests.get("https://api.shadiao.pro/chp")
+    #if words.status_code != 200:
+    #    return get_words()
+    #text = words.json()['data']['text']
+    #return text
     # 按照20个字符分割字符串
     # chunk_size = 20
     # split_notes = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
