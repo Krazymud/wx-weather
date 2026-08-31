@@ -223,7 +223,7 @@ def get_words():
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': 'Bearer {deepseek_api_key}'
+        'Authorization': f"Bearer {deepseek_api_key}"
     }
     response = requests.request("POST", url, headers=headers, data=payload)
     return response.text
