@@ -67,7 +67,7 @@ else:
     print("Status Code:", resp.status_code) 
     exit(1)  # 退出程序或处理错误
 
-
+print("fuck")
 city_id = resp_json["location"][0]["id"]
 params["location"] = city_id
 
