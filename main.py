@@ -32,9 +32,9 @@ app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
 # 微信公众号的user_id,多个用;（分号）隔开
 user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ"
 # 白天模板id
-template_id_day = "g7SNJwa3qk6v2xvPQYvMiKjpFnMgECYj6TWbizN4iMM"
+template_id_day = "lVE0caMOKtpX1ewQhhCE1XwPKyTGbtimeg4ylGaCXAc"
 # 晚上模板id
-template_id_night = "g7SNJwa3qk6v2xvPQYvMiKjpFnMgECYj6TWbizN4iMM"
+template_id_night = "lVE0caMOKtpX1ewQhhCE1XwPKyTGbtimeg4ylGaCXAc"
 # 呢称
 name = '宝宝'
 # 城市
