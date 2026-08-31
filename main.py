@@ -32,7 +32,7 @@ app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
 # 微信公众号的user_id,多个用;（分号）隔开
 user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ"
 # 白天模板id
-template_id_day = "	F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
+template_id_day = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 晚上模板id
 template_id_night = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 呢称
