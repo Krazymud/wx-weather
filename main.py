@@ -231,7 +231,7 @@ if __name__ == '__main__':
             "now_temperature": {"value": now_temperature},
             "min_temperature": {"value": globals()[f'day_forecast_{strDay}_temperature_min']},
             "max_temperature": {"value": globals()[f'day_forecast_{strDay}_temperature_max']},
-            "love_date": {"value": get_count()},
+            "love_date": {"value": "待定！"},
             "birthday": {"value": get_birthday()},
             "diff_date1": {"value": days_until_spring_festival()},
             "sunrise": {"value": globals()[f'day_forecast_{strDay}_sunrise']},
