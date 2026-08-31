@@ -41,6 +41,7 @@ name = '宝宝'
 city = '汕尾市'
 #deepseek prompt“
 prompt = '生成一句不落俗套的描写关于爱情、情侣的文案，精炼有趣，文字中不要直接出现“爱情、情侣”。返回的答案只提供句子，不要说其他任何内容'
+deepseek_api_key = 'sk-5df9ef28aca241bbbbc2fef869cdd927'
 
 # 当前时间
 today = datetime.now()
@@ -222,7 +223,7 @@ def get_words():
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': 'Bearer <TOKEN>'
+        'Authorization': 'Bearer {deepseek_api_key}'
     }
     response = requests.request("POST", url, headers=headers, data=payload)
     return response.text
