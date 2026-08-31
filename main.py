@@ -226,7 +226,7 @@ def get_words():
         'Authorization': f"Bearer {deepseek_api_key}"
     }
     response = requests.request("POST", url, headers=headers, data=payload)
-    return response.json()["choices"]["message"]["content"]
+    return response.json()["choices"][0]["message"]["content"]
     #words = requests.get("https://api.shadiao.pro/chp")
     #if words.status_code != 200:
     #    return get_words()
