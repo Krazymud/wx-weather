@@ -190,13 +190,13 @@ def get_words():
     if words.status_code != 200:
         return get_words()
     text = words.json()['data']['text']
-
+    return text
     # 按照20个字符分割字符串
-    chunk_size = 20
-    split_notes = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
+    # chunk_size = 20
+    # split_notes = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
     # 分配note N 如果split_notes元素少于5，则用空字符串填充
-    [note1, note2, note3, note4, note5] = (split_notes + [""] * 5)[:5]
-    return note1, note2, note3, note4, note5
+    # [note1, note2, note3, note4, note5] = (split_notes + [""] * 5)[:5]
+    # return note1, note2, note3, note4, note5
 
 
 if __name__ == '__main__':
@@ -207,7 +207,7 @@ if __name__ == '__main__':
     wm = WeChatMessage(client)
 
     # 获取彩虹屁
-    note1, note2, note3, note4, note5 = get_words()
+    note = get_words()
 
     # 获取当前UTC时间
     now_utc = datetime.utcnow()
@@ -240,11 +240,7 @@ if __name__ == '__main__':
             "windDirDay": {"value": globals()[f'day_forecast_{strDay}_windDirDay']},
             "windDirNight": {"value": globals()[f'day_forecast_{strDay}_windDirNight']},
             "windScaleDay": {"value": globals()[f'day_forecast_{strDay}_windScaleDay']},
-            "note1": {"value": note1},
-            "note2": {"value": note2},
-            "note3": {"value": note3},
-            "note4": {"value": note4},
-            "note5": {"value": note5}
+            "note": {"value": note}
             }
     # print(data)
 
