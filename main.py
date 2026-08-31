@@ -32,13 +32,13 @@ app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
 # 微信公众号的user_id,多个用;（分号）隔开
 user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ"
 # 白天模板id
-template_id_day = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
+template_id_day = "Mytd7FNmnRQRseJEdwCDjziDXiFS255a0eah1sPtO2U"
 # 晚上模板id
-template_id_night = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
+template_id_night = "Mytd7FNmnRQRseJEdwCDjziDXiFS255a0eah1sPtO2U"
 # 呢称
 name = '🍎宝宝'
 # 城市
-city = '汕尾城区'
+city = '汕尾市'
 
 
 # 当前时间
@@ -76,7 +76,7 @@ realtime_json = json.loads(requests.get(url, params, headers=headers).text)
 # 实时天气状况
 realtime = realtime_json["now"]
 # 当前温度 拼接 当前天气
-now_temperature = realtime["temp"] + "℃" + realtime["text"]
+now_temperature = realtime["temp"] + "度 " + realtime["text"]
 
 # 根据城市地理位置获取3天天气状况
 url = "https://m96mthd8c3.re.qweatherapi.com/v7/weather/3d"
@@ -92,9 +92,9 @@ day_forecast_today_sunset = day_forecast_today["sunset"]
 # 天气
 day_forecast_today_weather = day_forecast_today["textDay"]
 # 最低温度
-day_forecast_today_temperature_min = day_forecast_today["tempMin"]+"℃"
+day_forecast_today_temperature_min = day_forecast_today["tempMin"]+"度"
 # 最高温度
-day_forecast_today_temperature_max = day_forecast_today["tempMax"]+"℃"
+day_forecast_today_temperature_max = day_forecast_today["tempMax"]+"度"
 # 夜间天气
 day_forecast_today_night = day_forecast_today["textNight"]
 # 白天风向
@@ -218,9 +218,9 @@ if __name__ == '__main__':
     # 默认发当天
     strDay = "today"
     # 如果当前时间大于15点，也就是晚上，则发送明天天气
-    if hour_of_day > 15:
-        strDay = "tomorrow"
-        template_id_day = template_id_night
+    # if hour_of_day > 15:
+    #    strDay = "tomorrow"
+    #    template_id_day = template_id_night
 
     print("当前时间：" + str(beijing_time)+"即将推送："+strDay+"信息")
 
@@ -232,8 +232,8 @@ if __name__ == '__main__':
             "min_temperature": {"value": globals()[f'day_forecast_{strDay}_temperature_min']},
             "max_temperature": {"value": globals()[f'day_forecast_{strDay}_temperature_max']},
             "love_date": {"value": "待定！"},
-            "birthday": {"value": get_birthday()},
-            "diff_date1": {"value": days_until_spring_festival()},
+            "birthday": {"value": get_birthday()+"天"},
+            "diff_date1": {"value": days_until_spring_festival()+"天"},
             "sunrise": {"value": globals()[f'day_forecast_{strDay}_sunrise']},
             "sunset": {"value": globals()[f'day_forecast_{strDay}_sunset']},
             "textNight": {"value": globals()[f'day_forecast_{strDay}_night']},
