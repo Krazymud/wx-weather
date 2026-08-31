@@ -32,11 +32,11 @@ app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
 # 微信公众号的user_id,多个用;（分号）隔开
 user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ"
 # 白天模板id
-template_id_day = "Mytd7FNmnRQRseJEdwCDjziDXiFS255a0eah1sPtO2U"
+template_id_day = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 晚上模板id
-template_id_night = "Mytd7FNmnRQRseJEdwCDjziDXiFS255a0eah1sPtO2U"
+template_id_night = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 呢称
-name = '🍎宝宝'
+name = '\U1F34E'+'宝宝'
 # 城市
 city = '汕尾市'
 
