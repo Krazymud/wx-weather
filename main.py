@@ -23,22 +23,22 @@ import os
 # 哪天在一起的
 start_date = 'START_DATE'
 # 和风天气key
-appKey = 'APP_KEY'
+appKey = '7f0d029f0a2d46f680275879139f8e81'
 # 生日
-birthday = 'BIRTHDAY'
+birthday = '1998-06-06'
 # 微信公众号的appid和app_secret
-app_id = "APP_ID"
-app_secret = "APP_SECRET"
+app_id = "wx8ca13ecd97e07749"
+app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
 # 微信公众号的user_id,多个用;（分号）隔开
-user_ids = "USER_IDS"
+user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ"
 # 白天模板id
 template_id_day = "TEMPLATE_ID_NIGHT"
 # 晚上模板id
 template_id_night = "TEMPLATE_ID_NIGHT"
 # 呢称
-name = 'NAME'
+name = '🍎宝宝'
 # 城市
-city = 'CITY'
+city = '汕尾'
 
 
 # 当前时间
