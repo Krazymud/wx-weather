@@ -38,7 +38,7 @@ template_id_night = "F3XZTFv_Q34c288DT6NV6qnvs7WZkrBg-0aQwGL-Zlg"
 # 呢称
 name = '🍎宝宝'
 # 城市
-city = '汕尾'
+city = '汕尾城区'
 
 
 # 当前时间
