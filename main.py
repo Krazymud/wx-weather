@@ -188,8 +188,7 @@ def get_birthday():
 
 # 彩虹屁接口
 def get_words():
-    url = "https://api.deepseek.com/chat/completions"
-
+    words_url = "https://api.deepseek.com/chat/completions"
     payload = json.dumps({
         "messages": [
         {
@@ -225,7 +224,7 @@ def get_words():
         'Accept': 'application/json',
         'Authorization': f"Bearer {deepseek_api_key}"
     }
-    response = requests.request("POST", url, headers=headers, data=payload)
+    response = requests.request("POST", words_url, headers=headers, data=payload)
     return response.json()["choices"][0]["message"]["content"]
     #words = requests.get("https://api.shadiao.pro/chp")
     #if words.status_code != 200:
