@@ -43,6 +43,7 @@ jobs:
       TEMPLATE_ID_DAY: ${{ secrets.TEMPLATE_ID_DAY }}  # 从仓库的 secrets 中获取 TEMPLATE_ID_DAY
       TEMPLATE_ID_NIGHT: ${{ secrets.TEMPLATE_ID_NIGHT }}  # 从仓库的 secrets 中获取 TEMPLATE_ID_NIGHT
       USER_IDS: ${{ secrets.USER_IDS }}  # 从仓库的 secrets 中获取 USER_IDS
+      DEEP_KEY: ${{ secrets.DEEP_KEY }}
       START_DATE: ${{ secrets.START_DATE }}  # 从仓库的 secrets 中获取 START_DATE
       NAME: ${{ secrets.NAME }}  # 从仓库的 secrets 中获取 NAME
       BIRTHDAY: ${{ secrets.BIRTHDAY }}  # 从仓库的 secrets 中获取 BIRTHDAY
