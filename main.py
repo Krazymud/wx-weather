@@ -23,25 +23,25 @@ import os
 # 哪天在一起的
 start_date = 'START_DATE'
 # 和风天气key
-appKey = '7f0d029f0a2d46f680275879139f8e81'
+appKey = APP_KEY
 # 生日
 birthday = '1998-06-06'
 # 微信公众号的appid和app_secret
-app_id = "wx8ca13ecd97e07749"
-app_secret = "bd0a64c5716f7478ade3c235ba5f9c73"
+app_id = APP_ID
+app_secret = APP_SECRET
 # 微信公众号的user_id,多个用;（分号）隔开
 user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ;ollgl3I3GftjoVZ2edWNb54fLil4"
 # 白天模板id
-template_id_day = "mjBWx7P9LKbeuFzBlwld4QbGrNOD66pnji2ZXLVg6WM"
+template_id_day = TEMPLATE_ID_DAY
 # 晚上模板id
-template_id_night = "mjBWx7P9LKbeuFzBlwld4QbGrNOD66pnji2ZXLVg6WM"
+template_id_night = TEMPLATE_ID_NIGHT
 # 呢称
 name = '宝宝'
 # 城市
 city = '汕尾市'
 #deepseek prompt“
 prompt = '生成一句不落俗套的描写关于爱情、情侣的文案，精炼有趣，文字中不要直接出现“爱情、情侣”。返回的答案只提供句子，不要说其他任何内容'
-deepseek_api_key = 'sk-5df9ef28aca241bbbbc2fef869cdd927'
+deepseek_api_key = DEEP_KEY
 
 # 当前时间
 today = datetime.now()
@@ -225,7 +225,6 @@ def get_words():
         'Authorization': f"Bearer {deepseek_api_key}"
     }
     response = requests.request("POST", words_url, headers=headers, data=payload)
-    print(response.text)
     return response.json()["choices"][0]["message"]["content"]
     #words = requests.get("https://api.shadiao.pro/chp")
     #if words.status_code != 200:
