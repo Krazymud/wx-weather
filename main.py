@@ -23,25 +23,25 @@ import os
 # 哪天在一起的
 start_date = 'START_DATE'
 # 和风天气key
-appKey = APP_KEY
+appKey = os.environ.get('APP_KEY')
 # 生日
 birthday = '1998-06-06'
 # 微信公众号的appid和app_secret
-app_id = APP_ID
-app_secret = APP_SECRET
+app_id = os.environ.get('APP_ID')
+app_secret = os.environ.get('APP_SECRET')
 # 微信公众号的user_id,多个用;（分号）隔开
 user_ids = "ollgl3OQx5INiRKhdovFPsJmD9GQ;ollgl3I3GftjoVZ2edWNb54fLil4"
 # 白天模板id
-template_id_day = TEMPLATE_ID_DAY
+template_id_day = os.environ.get('TEMPLATE_ID_DAY')
 # 晚上模板id
-template_id_night = TEMPLATE_ID_NIGHT
+template_id_night = os.environ.get('TEMPLATE_ID_NIGHT')
 # 呢称
 name = '宝宝'
 # 城市
 city = '汕尾市'
 #deepseek prompt“
 prompt = '生成一句不落俗套的描写关于爱情、情侣的文案，精炼有趣，文字中不要直接出现“爱情、情侣”。返回的答案只提供句子，不要说其他任何内容'
-deepseek_api_key = DEEP_KEY
+deepseek_api_key = os.environ.get('DEEP_KEY')
 
 # 当前时间
 today = datetime.now()
